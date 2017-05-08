@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>textEditBackground.png</file>
+        <file>pushButtonBackground.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/button.png</file>
+        <file>res/card.png</file>
+        <file>res/farmer.png</file>
+        <file>res/lord.png</file>
+        <file>res/table.png</file>
+    </qresource>
+</RCC>

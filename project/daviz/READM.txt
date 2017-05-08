@@ -1,0 +1,12 @@
+
+http://www.qtcn.org/bbs/read-htm-tid-51275-page-1.html
+途：
+
+    工作中辅助终端调试的。
+
+特点：
+
+    插件架构：类似于Qt Creator。
+    采用OpenGL的FBO和顶点、片段着色器特性实现了雷达余晖效果，PPI视图可以实现每秒渲染数十万点，不到3% cpu占用率。
+    基于Qt5与Qt3D，使用QGraphicsItem包装OpenGL绘制的图元，与2D的文字，坐标轴放到一个graphics scene。
+    model/view的性能优化：model记录更改，每隔一段时间通知view。

@@ -1,0 +1,12 @@
+#ifndef C_SHAREDDLL_GLOBAL_H
+#define C_SHAREDDLL_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(C_SHAREDDLL_LIBRARY)
+#  define C_SHAREDDLLSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define C_SHAREDDLLSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // C_SHAREDDLL_GLOBAL_H

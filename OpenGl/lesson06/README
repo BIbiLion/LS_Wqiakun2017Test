@@ -1,0 +1,41 @@
+Qt OpenGL Tutorial #6.
+
+Project Name: Qt OpenGL Tutorial
+Project Description: Texture Mapping
+
+Authors Name: Cavendish ( cavendish@qiliang.net )
+Authors Web Site: http://www.qiliang.net/nehe_qt
+
+Requirments:
+Qt ( I used version 3.1.0 Free and Enterprise for Unix/X11, and 3.1.0 Enterprise for MS/Windows )
+http://www.trolltech.com
+
+(1)Unix/X11
+gcc ( I used gcc 3.2 )
+http://gcc.gnu.org
+X ( I used version 4.2.0 )
+http://www.xfree86.org
+Mesa ( I used version 5.0 )
+http://www.mesa3d.org
+
+(2)MS/Windows
+Microsoft Visual Studio ( I used version 6.0 )
+http://www.microsoft.com
+
+Known bugs/issues:
+
+1. Qt also support Macintosh and Embedded. But I didn't compile my source code on them.
+2. In RedHat 7.3, I used gcc 2.96, the toggle of the fullscreen mode and window mode is something wrong.
+   But in RedHat 8.0, I used gcc 3.2, the application is ok. I don't know the reason.
+
+Contact:
+
+If you have problems, comments, or have useful hints,
+email me at cavendish@qiliang.net.
+
+Credits:
+
+Jeff Molofee ( nehe@connect.ab.ca ) for writing the NeHe tutorials ( http://nehe.gamedev.net ).
+CKer ( cker@sina.com ) for translating the NeHe tutorials into Chinese ( http://www.csdn.net/develop/author/netauthor/CKer ).
+
+--Cavendish ( 2002/12/18 )

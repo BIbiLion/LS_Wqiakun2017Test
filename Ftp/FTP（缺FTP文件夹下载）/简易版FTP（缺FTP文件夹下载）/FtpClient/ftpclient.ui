@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FtpClientClass</class>
+ <widget class="QDialog" name="FtpClientClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>593</width>
+    <height>448</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FTP连接验证程序</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/title.png</normaloff>img/title.png</iconset>
+  </property>
+  <widget class="QTreeWidget" name="treeIssue">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
+     <width>593</width>
+     <height>428</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string notr="true">1</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="btnBack">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>img/back.png</normaloff>img/back.png</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnReflash">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>0</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>img/reflash.png</normaloff>img/reflash.png</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnPublish">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>0</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>img/publish.png</normaloff>img/publish.png</iconset>
+   </property>
+  </widget>
+  <widget class="QLabel" name="stateLabel">
+   <property name="geometry">
+    <rect>
+     <x>92</x>
+     <y>2</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>待链接</string>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="procBar">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>0</y>
+     <width>493</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>24</number>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="ftpclient.qrc"/>
+ </resources>
+ <connections/>
+</ui>

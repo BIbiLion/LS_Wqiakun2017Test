@@ -1,0 +1,40 @@
+Qt OpenGL教程第六课.
+
+项目名称：Qt OpenGL教程
+项目描述：纹理映射
+
+作者姓名：Cavendish ( cavendish@qiliang.net )
+作者网站：http://www.qiliang.net/nehe_qt
+
+需求：
+Qt （ 我在Unix/X11上使用的是3.1.0的自由版和企业版，在MS/Windows上使用的是3.1.0的企业版 ）
+http://www.trolltech.com
+
+(1)Unix/X11
+gcc （ 我使用的是3.2 ）
+http://gcc.gnu.org
+X （ 我使用的是4.2.0 ）
+http://www.xfree86.org
+Mesa （ 我使用的是5.0 ）
+http://www.mesa3d.org
+
+(2)MS/Windows
+Microsoft Visual Studio （ 我使用的是6.0 ）
+http://www.microsoft.com
+
+已知bug/问题：
+
+1. Qt也支持Macintosh和嵌入式系统。但是我还没有在这些系统是编译我的代码。
+2. 在RedHat 7.3下，我使用的是gcc 2.96，在切换全屏模式和窗口模式的时候，不正常。
+   在RedHat 8.0下，我使用的是gcc 3.2，就没有任何问题，我不知道这是为什么。
+
+联系：
+
+如果你有什么问题、说明，或者有用的提示，请给我发email（ cavendish@qiliang.net ）。
+
+感谢：
+
+Jeff Molofee （ nehe@connect.ab.ca ） 写了NeHe教程 （ http://nehe.gamedev.net ）。
+CKer （ cker@sina.com ） 把NeHe教程译成中文 （ http://www.csdn.net/develop/author/netauthor/CKer ）。
+
+--Cavendish （ 2002/12/18 ）

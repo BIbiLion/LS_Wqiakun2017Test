@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ICQQ", "ICQQ.vcproj", "{B2A699AB-44BB-411C-8AE5-CE06D1B8E5BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		English|Win32 = English|Win32
+		Installer|Win32 = Installer|Win32
+		InstallerDbg|Win32 = InstallerDbg|Win32
+		InstallerEng|Win32 = InstallerEng|Win32
+		Japanese|Win32 = Japanese|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2A699AB-44BB-411C-8AE5-CE06D1B8E5BF}.Debug|Win32.ActiveCfg = DebugCN|Win32
+		{B2A699AB-44BB-411C-8AE5-CE06D1B8E5BF}.Debug|Win32.Build.0 = DebugCN|Win32
+		{B2A699AB-44BB-411C-8AE5-CE06D1B8E5BF}.English|Win32.ActiveCfg = English|Win32
+		{B2A699AB-44BB-411C-8AE5-CE06D1B8E5BF}.English|Win32.Build.0 = English|Win32
+		{B2A699AB-44BB-411C-8AE5-CE06D1B8E5BF}.Installer|Win32.ActiveCfg = Installer|Win32
+		{B2A699AB-44BB-411C-8AE5-CE06D1B8E5BF}.Installer|Win32.Build.0 = Installer|Win32
+		{B2A699AB-44BB-411C-8AE5-CE06D1B8E5BF}.InstallerDbg|Win32.ActiveCfg = InstallerDbg|Win32
+		{B2A699AB-44BB-411C-8AE5-CE06D1B8E5BF}.InstallerDbg|Win32.Build.0 = InstallerDbg|Win32
+		{B2A699AB-44BB-411C-8AE5-CE06D1B8E5BF}.InstallerEng|Win32.ActiveCfg = InstallerEng|Win32
+		{B2A699AB-44BB-411C-8AE5-CE06D1B8E5BF}.InstallerEng|Win32.Build.0 = InstallerEng|Win32
+		{B2A699AB-44BB-411C-8AE5-CE06D1B8E5BF}.Japanese|Win32.ActiveCfg = Chinese|Win32
+		{B2A699AB-44BB-411C-8AE5-CE06D1B8E5BF}.Japanese|Win32.Build.0 = Chinese|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

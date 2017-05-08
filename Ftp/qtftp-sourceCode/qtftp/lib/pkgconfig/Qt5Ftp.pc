@@ -1,0 +1,14 @@
+prefix=C:\Qt\Qt5.2.1\5.2.1\mingw48_32
+exec_prefix=${prefix}
+libdir=${prefix}\lib
+includedir=${prefix}\include
+
+
+Name: Qt5 Ftp
+Description: Qt Ftp module
+Version: 5.0.0
+Libs: -L${libdir} -lQt5Ftp 
+Libs.private: -LC:\Qt\Qt5.2.1\5.2.1\mingw48_32\lib -lQt5Network -lQt5Core .obj\release\Qt5Ftp_resource_res.o   
+Cflags: -I${includedir}/QtFtp -I${includedir}
+Requires: Qt5Core Qt5Network
+

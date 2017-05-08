@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/image">
+        <file alias="close.png">image/close.png</file>
+        <file>image/frame.png</file>
+        <file>image/warzone.png</file>
+        <file>image/warzone_click.png</file>
+    </qresource>
+</RCC>

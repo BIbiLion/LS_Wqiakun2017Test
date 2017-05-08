@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/FtpClient">
+        <file>ftpclient.ui</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>782</width>
+    <height>433</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+	border: 1px solid #AEAEAE;
+	border-radius: 0;
+	color: #000000;
+	min-width: 100px;
+	min-height: 25px;
+	padding: 0px;
+}
+
+QPushButton:hover {
+	color: #ffffff;
+	background-color: #448ACA;
+}
+
+QComboBox{
+    border-radius: 0px;
+    padding: 1px 10px 1px 5px;
+    border: 1px solid #AEAEAE;
+	min-width: 100px;
+	min-height: 20px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #DCDCDC;
+}
+
+QComboBox::down-arrow {
+    background-color: #DCDCDC;
+}
+
+QLabel#labelStatus {
+	color: #0000ff;
+}
+
+QTextBrowser {
+	border: 1px solid #AEAEAE;
+	background-color: #ffffff;
+}
+
+
+QScrollBar:vertical {
+    width:10px;
+    background-color:#ffffff;
+}
+
+QScrollBar:horizontal {
+    height:10px;
+    background-color: #ffffff;
+}
+
+QScrollBar::handle:vertical {
+    width:10px;
+	height: 100px;
+    background: #D3D3D3;
+}
+
+QScrollBar::handle:horizontal {
+    height:10px;
+    background: #D3D3D3;
+}
+
+QScrollBar::handle:vertical:hover {
+    width:10px;
+    background: #C9C9C9;
+}
+
+QScrollBar::handle:horizontal:hover {
+    height:10px;
+    background: #C9C9C9;
+}
+
+QScrollBar::add-line:vertical {
+    height:0px;
+    width:0px;
+}
+
+QScrollBar::add-line:horizontal {
+    height:0px;
+    width:0px;
+}
+
+QScrollBar::sub-line:vertical {
+    height:0px;
+    width:0px;
+}
+
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>选择源文件编码：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBoxCodecSource">
+       <item>
+        <property name="text">
+         <string>UTF8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>GB18030</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>目标文件编码：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBoxCodecDest">
+       <item>
+        <property name="text">
+         <string>新建项目</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>新建项目</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>新建项目</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>新建项目</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>新建项目</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>新建项目</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>新建项目</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>新建项目</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>新建项目</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>新建项目</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>新建项目</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnProject">
+       <property name="text">
+        <string>选择项目</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnChange">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>转换</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTextBrowser" name="textBrowser"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelStatus">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>dog.png</file>
+    </qresource>
+</RCC>

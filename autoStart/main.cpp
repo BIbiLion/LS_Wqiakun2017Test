@@ -1,4 +1,4 @@
-﻿#include <QCoreApplication>
+#include <QCoreApplication>
 #include <QSettings>
 //修改注册表  如果注册表不存在，再删除也不会发生错误。
 #define REG_RUN "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run"
@@ -23,6 +23,7 @@ void setAutoStart(bool is_auto_start)
 #include <QDebug>
 
 #include "savefile.h"
+#include <QTextStream>
 
 int main(int argc, char *argv[])
 {
@@ -41,5 +42,31 @@ int main(int argc, char *argv[])
     _by[1]=0x90;
     */
 
-    return a.exec();
+    // return a.exec();
+    QTextStream standardOutput(stdout);
+    standardOutput<<"standardOutput";
+
+
+    int i=0;
+    while(i<10)
+    {
+        if(++i==9)//(++i)==9
+        {
+            standardOutput<<"test:"<<i<<"\n";
+        }
+        standardOutput<<i<<"\n";
+    }
+    qDebug()<<"+++";
+    int j=10;
+    while(j<20)
+    {
+        if(j++==15)//j==15 j++
+        {
+            standardOutput<<"test:"<<j<<"\n";
+        }
+        standardOutput<<j<<"\n";
+    }
+
+    //getchar();
+    return 0;
 }

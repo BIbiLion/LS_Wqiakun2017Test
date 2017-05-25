@@ -89,9 +89,19 @@ public:
         qDebug()<<"addNode------";
         Node * _curNode= head;
         int i=1;
-        if(i<0)//插入到头部
+        Node*  _node=NULL;
+        _node=(struct Node *)malloc(sizeof(struct Node));
+        _node->lastNode=NULL;
+        _node->name='K';
+        _node->nextNode=NULL;
+        if(_posNode<1)//插入到头部
         {
+            _node->nextNode=head;
+            head->lastNode=_node;
 
+            head=_node;
+            qDebug()<<"add node head";
+            vistNode();
             return;
         }
 
@@ -101,39 +111,80 @@ public:
             ++i;
             _curNode=_curNode->nextNode;
         }
-         Node*  _node;
+
         if(_curNode)//不是队尾
         {
-              _node=(struct Node *)malloc(sizeof(struct Node));
+            /*
+             _node=(struct Node *)malloc(sizeof(struct Node));
             _node->lastNode=NULL;
             _node->name='K';
             _node->nextNode=NULL;
+            */
 
             //插入方法
-          //_curNode->nextNode;//插入后的节点
+            //_curNode->nextNode;//插入后的节点
 
-           _node->nextNode=_curNode->nextNode;
-           _curNode->nextNode->lastNode=_node;
+            _node->nextNode=_curNode->nextNode;
+            _curNode->nextNode->lastNode=_node;
 
-           _node->lastNode=_curNode;
-           _curNode->nextNode=_node;
+            _node->lastNode=_curNode;
+            _curNode->nextNode=_node;
 
 
 
         }
         else//队尾
         {
-
+            tail->nextNode=_node;
+            _node->lastNode=tail;
+            tail=_node;
+            qDebug()<<"insert tail";
         }
         vistNode();
 
     }
-/*
+
     void delNode(int _posNode)
     {
+        //删除头节点
+        if(_posNode<1)
+        {
+            qDebug()<<"del node pos head";
+            head=head->nextNode;
+            vistNode();
+            return;
+        }
 
+        //删除中间节点
+        int i=1;
+        Node * _delNode=head;
+        while(i<_posNode)
+        {
+
+            _delNode=_delNode->nextNode;
+
+            ++i;
+
+        }
+        if(_delNode)
+        {
+            qDebug()<<"del node pos middle";
+          _delNode->nextNode=_delNode->nextNode->nextNode;
+          _delNode->nextNode->lastNode=_delNode;
+          vistNode();
+        }
+        else
+        {
+            //删除尾节点
+            //if(_posNode>10)
+            {  qDebug()<<"del node pos tail";
+                tail=tail->lastNode;
+                tail->nextNode=NULL;
+                vistNode();
+            }
+        }
     }
-    */
+
 };
 
 
@@ -144,7 +195,12 @@ int main(int argc, char *argv[])
     TwoWayLinkedList * twoLinkeWay= new TwoWayLinkedList();
     twoLinkeWay->createLinkList(10);
     twoLinkeWay->vistNode();
-    twoLinkeWay->addNode(3);
+    //twoLinkeWay->addNode(3);
+    //twoLinkeWay->addNode(0);
+    twoLinkeWay->addNode(11);
+    // twoLinkeWay->delNode(0);
+    //twoLinkeWay->delNode(11);
+    twoLinkeWay->delNode(5);
 
     return a.exec();
 }

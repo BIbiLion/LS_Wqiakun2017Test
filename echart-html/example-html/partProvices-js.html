@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>ECharts map Demo</title>
+</head>
+<body>
+      <div id="main" style="height:500px;"></div>
+	  <div id="main2" style="height:200px;"></div>
+</body>
+   <script src="js/echarts.js"></script>
+   <script src="mapData/js/beijing.js"></script>
+	<script src="mapData/js/hebei.js"></script>
+<script>
+// 初始化echarts示例mapChart
+	var mapChart = echarts.init(document.getElementById('main'));
+	mapChart.setOption({
+	    series:[
+		{
+		type:'map',
+		map:'河北',
+		}
+		]
+		
+	  }
+	  );
+	  
+	  
+	  var mapChart2 = echarts.init(document.getElementById('main2'));
+	  mapChart2.setOption({
+	    series:[
+		{
+		type:'map',
+		map:'北京',
+		}
+		]
+		
+	  }
+	  );
+	  
+</script>
+</html>

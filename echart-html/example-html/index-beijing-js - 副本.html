@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>ECharts map Demo</title>
+</head>
+<body>
+      <div id="main" style="height:1000px;"></div>
+</body>
+   <script src="js/echarts.js"></script>
+	<script src="mapData/js/china.js"></script>
+<script>
+   //初始化各个军区的分区
+   var westAreas = ['新疆','西藏','青海','甘肃','四川','宁夏','重庆','陕西'];
+    
+	function showWestArea(){
+	   data:[
+	   {name:'新疆',selected:true}, 
+	   {name:'西藏',selected:true},
+	   ]
+	}
+  
+// 初始化echarts示例mapChart
+	var mapChart = echarts.init(document.getElementById('main'));
+	mapChart.setOption(
+	{ 
+	    backgroundColor: '#404a59',//背景色
+		roam:true,//缩放
+		title:{
+		    text:"五大军区分布图",
+			subtext:"provide wqk",
+		     left:'center',
+			 textStyle:{
+			      color:'#fff'
+			            }
+			 
+		    },
+		
+		
+	    tooltip:{
+		
+		trigger:'item',
+		    formatter: function(a){  
+			        //该战区的其他省份也变色
+			
+						if(a.name=='新疆'){
+						    return ("西部战区-新疆");
+					    }else{
+						      return("其他战区-省份");
+                            } 
+                    }  
+		},
+		/*
+		toolBox:{
+		    show:false,
+		    orient:'vertical',
+		    left:'right',
+		    top:'center',
+		    freature:{
+		        }
+		},
+		*/
+		
+	    series:[
+		{
+		        type:'map',
+		        map:'china',
+				selectedMode:'single',//单选
+				itemStyle:{
+				   areaColor:'#389887',
+				},
+				
+		        data:[
+		           {name:'河南',selected:true,color:'red'}//选中了河南的地图
+		              ]
+		}]
+		
+	});
+	
+	mapChart.on('click', function (params) {//回调函数，点击时触发，参数params格式参加官方API
+        alert(params.name);//弹出当前点击城市的名称
+		 hebei(params);
+    });
+	 function hebei(params) {
+	  alert('1');//弹出当前点击城市的名称
+		 };
+  
+  
+</script>
+</html>

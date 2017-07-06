@@ -1,0 +1,31 @@
+$.get('/map/shandong.json', function (mapJson) {
+    echarts.registerMap('shandong', mapJson);
+    var chart = echarts.init(document.getElementById('mainMap'));//在id为mainMap的dom元素中显示地图
+    chart.setOption({
+        tooltip: {
+            trigger: 'item',
+            formatter: function(params) {//回调函数，参数params具体格式参加官方API
+                //鼠标放到某个地市上，显示这个地市的名称加人口数
+                //例如 params.name：当前地市名称。params.value：你传入的json数据与当前地市匹配的一项。
+                //params.data.value:你传入的json数据与当前地市匹配的一项中'value'对应的数据
+                return params.name+":"+params.data.value;
+            }
+        },
+        series: [{
+            type: 'map',
+            map: 'shandong',//要和echarts.registerMap（）中第一个参数一致
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data : dataParam//人口数据：例如[{name:'济南',value:'100万'},{name:'菏泽'，value:'100万'}......]
+        }]
+    }),
+    chart.on('click', function (params) {//回调函数，点击时触发，参数params格式参加官方API
+        alert(params.name);//弹出当前点击城市的名称
+    });
+});

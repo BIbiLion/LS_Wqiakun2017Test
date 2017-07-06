@@ -1,9 +1,11 @@
-﻿#include <QCoreApplication>
+#include <QCoreApplication>
 
 #include "md5.h"
 
 #include <QDebug>
 #include <QTextCodec>
+
+#include <QtZlib/zconf.h>
 
 struct Version
 {

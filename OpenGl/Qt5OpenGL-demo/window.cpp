@@ -104,3 +104,8 @@ void Window::updateScene()
     mScene->update(0.0f);
     paintGl();
 }
+
+void Window::wheelEvent(QWheelEvent * ev)
+{
+
+}

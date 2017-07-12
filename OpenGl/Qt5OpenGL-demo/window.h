@@ -23,6 +23,8 @@ protected slots:
     void paintGl();
     void updateScene();
 
+    void wheelEvent(QWheelEvent * ev);
+
 private:
     void printContextInfos();
 

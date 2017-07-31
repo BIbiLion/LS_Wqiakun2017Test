@@ -7,6 +7,7 @@
 #include <QOpenGLContext>
 #include <QTimer>
 
+#include <GL/gl.h>
 static void infoGL()
 {
     glCheckError();
@@ -55,7 +56,7 @@ Window::Window(QScreen *screen) :
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(updateScene()));
-    timer->start(16);
+    timer->start(20);
 }
 
 Window::~Window()
@@ -81,15 +82,29 @@ void Window::printContextInfos()
 
 void Window::initializeGl()
 {
+    initializeOpenGLFunctions();
+
     mContext->makeCurrent(this);
     mScene->initialize();
+
 }
 
 void Window::paintGl()
 {
     if( !isExposed() ) return;
     mContext->makeCurrent(this);
-    mScene->render();
+    //mScene->render();
+
+
+    glViewport(0, 0, width(), height());
+    //qDebug()<<"比："<<w<<h;
+    QMatrix4x4 projectionMatrix,viewMatrix;
+    projectionMatrix.setToIdentity();
+    projectionMatrix.perspective(60.0, float(width())/float(height()), 0.1f, 20.0f);
+    viewMatrix.setToIdentity();
+    mScene->render(viewMatrix,projectionMatrix);
+
+
     mContext->swapBuffers(this);
 }
 

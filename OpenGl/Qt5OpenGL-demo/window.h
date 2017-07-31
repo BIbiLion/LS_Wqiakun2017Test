@@ -2,12 +2,12 @@
 #define WINDOW_H
 
 #include "abstractscene.h"
-
+#include "basicusagescene.h"
 #include <QWindow>
 
 class QOpenGLContext;
-
-class Window : public QWindow
+#include <QOpenGLFunctions>
+class Window : public QWindow , protected QOpenGLFunctions
 {
     Q_OBJECT
 public:
@@ -29,7 +29,7 @@ private:
     void printContextInfos();
 
     QOpenGLContext *mContext;
-    QScopedPointer<AbstractScene> mScene;
+    QScopedPointer<BasicUsageScene> mScene;
     
     void initializeGl();
 };

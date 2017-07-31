@@ -4,7 +4,7 @@
 #  include <winver.h>
 # endif
 
-IDI_ICON1	ICON	DISCARDABLE	"E:\\LSwuqiankun\\LS_Wqiakun2017\\OpenGl\\Qt_GLSL\\source\\appIcon.ico"
+IDI_ICON1	ICON	DISCARDABLE	"E:\\LSwuqiankun\\LS_Wqiakun2017\\LS_Wqiakun2017Test\\OpenGl\\Qt_GLSL\\source\\appIcon.ico"
 
 VS_VERSION_INFO VERSIONINFO
 	FILEVERSION 1,0,0,0

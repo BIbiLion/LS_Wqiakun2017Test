@@ -6,12 +6,17 @@
 #include <QApplication>
 #include "window.h"
 
+
+#include "./openglWidget/glwidget.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
     Window w;
     w.show();
+
+//    GLWidget glw;
+//    glw.show();
 
     return a.exec();
 }

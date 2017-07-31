@@ -1,0 +1,107 @@
+
+[Interest] How to construct a cubemap texture using QOpenGLTexture?
+Prashanth Udupa prashanth.udupa at gmail.com
+Mon Feb 1 19:02:59 CET 2016
+
+    Previous message: [Interest] [Qt3D] Several Problems w/Examples
+    Next message: [Interest] How to construct a cubemap texture using QOpenGLTexture?
+    Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]
+
+Hello there!
+
+I want to construct a cubemap texture using QOpenGLTexture using 6 images
+and use it to map reflections on a torus.
+
+I am using the following code to construct the cubemap
+
+const QImage posx =
+QImage(":/images/posx.jpg").mirrored().convertToFormat(QImage::Format_RGBA8888);const
+QImage posy = QImage(":/images/posy.jpg").mirrored().convertToFormat(QImage::Format_RGBA8888);const
+QImage posz = QImage(":/images/posz.jpg").mirrored().convertToFormat(QImage::Format_RGBA8888);const
+QImage negx = QImage(":/images/negx.jpg").mirrored().convertToFormat(QImage::Format_RGBA8888);const
+QImage negy = QImage(":/images/negy.jpg").mirrored().convertToFormat(QImage::Format_RGBA8888);const
+QImage negz = QImage(":/images/negz.jpg").mirrored().convertToFormat(QImage::Format_RGBA8888);
+
+d->environment = new QOpenGLTexture(QOpenGLTexture::TargetCubeMap);
+d->environment->create();
+d->environment->setSize(posx.width(), posx.height(), posx.depth());
+d->environment->setFormat(QOpenGLTexture::RGBA8_UNorm);
+d->environment->allocateStorage();
+d->environment->setData(0, 0, QOpenGLTexture::CubeMapPositiveX,
+                        QOpenGLTexture::RGBA, QOpenGLTexture::UInt8,
+                        (const void*)posx.constBits(), 0);
+d->environment->setData(0, 0, QOpenGLTexture::CubeMapPositiveY,
+                        QOpenGLTexture::RGBA, QOpenGLTexture::UInt8,
+                        (const void*)posy.constBits(), 0);
+d->environment->setData(0, 0, QOpenGLTexture::CubeMapPositiveZ,
+                        QOpenGLTexture::RGBA, QOpenGLTexture::UInt8,
+                        (const void*)posz.constBits(), 0);
+d->environment->setData(0, 0, QOpenGLTexture::CubeMapNegativeX,
+                        QOpenGLTexture::RGBA, QOpenGLTexture::UInt8,
+                        (const void*)negx.constBits(), 0);
+d->environment->setData(0, 0, QOpenGLTexture::CubeMapNegativeY,
+                        QOpenGLTexture::RGBA, QOpenGLTexture::UInt8,
+                        (const void*)negy.constBits(), 0);
+d->environment->setData(0, 0, QOpenGLTexture::CubeMapNegativeZ,
+                        QOpenGLTexture::RGBA, QOpenGLTexture::UInt8,
+                        (const void*)negz.constBits(), 0);
+d->environment->setWrapMode(QOpenGLTexture::ClampToEdge);
+d->environment->setMinificationFilter(QOpenGLTexture::LinearMipMapLinear);
+d->environment->setMagnificationFilter(QOpenGLTexture::LinearMipMapLinear);
+
+I then bind the environment texture during paintGL() as follows
+
+.....
+d->environment->bind(0);
+d->shader->setUniformValue("qt_Environment", 0);
+const int nrIndicies = d->torusResolution * d->tubeResolution * 6;
+glDrawElements(GL_TRIANGLES, nrIndicies, GL_UNSIGNED_INT, (void*)0);.....
+
+Vertex shader snippet is as follows
+
+....
+varying vec3 v_TexCoord;....
+void main(void){
+    ....
+    v_TexCoord = normalize(v_Normal + v_Position);
+    ....}
+
+The fragment shader snippet is as follows
+
+.....
+varying vec3 v_TexCoord;
+uniform samplerCube qt_Environment;.....
+
+vec4 evaluateColor(in vec3 normal, in vec3 texCoord){
+    vec3 finalColor ....
+    .....
+    .....
+    finalColor += textureCube(qt_Environment, texCoord).rgb;
+    return vec4( finalColor, c_one );}
+void main(void){
+    gl_FragColor = evaluateColor(v_Normal, v_TexCoord);}
+
+I also have another part of the code which renders the cubemap on a skybox.
+While I am able to project the 6 images on the skybox and render it
+properly, I am unable to render the reflection on a torus object in the
+scene.
+
+I am getting a well lit torus, with no reflection [
+http://i.stack.imgur.com/qWRwN.png ].
+
+You can download the complete code from here [ https://goo.gl/Wu8ccb ]
+
+Can somebody help with this please?
+
+Best Regards,
+
+Prashanth
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.qt-project.org/pipermail/interest/attachments/20160201/a73eda0e/attachment.html>
+
+    Previous message: [Interest] [Qt3D] Several Problems w/Examples
+    Next message: [Interest] How to construct a cubemap texture using QOpenGLTexture?
+    Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]
+
+More information about the Interest mailing list

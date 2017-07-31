@@ -20,7 +20,7 @@ public:
 
     virtual void resize(int width, int height) = 0;
 
-protected:
+public:
     QOpenGLContext *mContext;
 };
 

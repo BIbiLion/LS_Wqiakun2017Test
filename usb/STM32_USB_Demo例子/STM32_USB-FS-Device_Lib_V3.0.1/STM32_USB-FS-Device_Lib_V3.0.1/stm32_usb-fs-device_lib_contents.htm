@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+		
+		<title>STM32 USB Library package</title><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></head>
+<body>
+		<table align="center" border="0" cellpadding="0" cellspacing="0" width="900">
+			<tbody><tr valign="top">
+				<td>
+					<table width="100%">
+						<tbody><tr>
+							<td align="right"><img style="width: 900px; height: 85px;" alt="STM32 Releasing your creativity" src="_htmresc/stm32_ryc.jpg"></td>
+						</tr>
+					</tbody></table>
+					<br>
+					<table border="0" cellpadding="2" cellspacing="0" width="900">
+						<tbody><tr>
+							<td class="tabtitle"><strong><font color="#000000" face="Arial, Helvetica, sans-serif" size="4">
+										Easy-to-use USB-FS-Device Library for STM32</font></strong></td>
+						</tr>
+					</tbody></table>
+					<table border="0" cellpadding="0" cellspacing="2" width="900">
+						<tbody>
+							<tr>
+								<td valign="top"><font face="Arial, Helvetica, sans-serif" size="2">
+										</font><p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">The <strong><span style="font-family: Arial;">STM32</span></strong> <strong><span style="font-family: Arial;">USB-FS-Device Library</span></strong> provides 
+            a free, complete firmware package that makes implementation of USB-FS-Device 
+            interfaces in&nbsp;STM32 applications quick&nbsp;and easy, that 
+            allows developers to painlessly develop any flavor of USB-FS-Device firmware 
+            including:</font></span></p>
+<font face="Arial, Helvetica, sans-serif" size="2">										</font><ul>
+<font face="Arial, Helvetica, sans-serif" size="2">											<li>
+												&nbsp;<strong>Control transfer</strong>
+											with generic device management tasks
+											</li><li>
+												&nbsp;<strong>Interrupt transfer</strong>
+											with HID Mouse/Joystick demo
+											</li><li>
+												&nbsp;<strong>Bulk transfer</strong>
+											with mass storage demo
+											</li><li>
+												&nbsp;<strong>Isochronous transfer</strong> with Voice Speaker demo
+											</li>
+										</font></ul>
+<font face="Arial, Helvetica, sans-serif" size="2">										</font><p>
+<font face="Arial, Helvetica, sans-serif" size="2">									</font><font face="Arial, Helvetica, sans-serif" size="2">
+										</font></p><p>
+<font face="Arial, Helvetica, sans-serif" size="2">										In addition, the&nbsp;package provides implementation of DFU for firmware 
+										updates on&nbsp;</font><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">USB-FS-Device</font></span><font face="Arial, Helvetica, sans-serif" size="2">, and of the popular Virtual COM (CDC class) for emulation of a 
+										classic RS232 interface on&nbsp;</font><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">USB-FS-Device</font></span><font face="Arial, Helvetica, sans-serif" size="2">.
+										</font></p><p>
+<font face="Arial, Helvetica, sans-serif" size="2">											For more details about&nbsp;</font><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">USB-FS-Device</font></span><font face="Arial, Helvetica, sans-serif" size="2"> Library and demos implementation, please refer to 
+											the User manual "UM0424 STM32F10xxx USB development kit", available for 
+											download from the ST microcontrollers website: <a target="_blank" href="http://www.st.com/stm32">www.st.com/stm32</a>
+										</font></p><p>
+<font face="Arial, Helvetica, sans-serif" size="2">											Links below connect to demo <em>folder</em>
+										. The package contains the following demos:
+										</font></p><p><font face="Arial, Helvetica, sans-serif" size="2"><font face="Arial, Helvetica, sans-serif" size="2"> <em>Note</em>: These demos run 
+												on STMicroelectronics STM3210B-EVAL and STM3210E-EVAL evaluation boards and can 
+												be easily tailored to any other hardware. To select the STMicroelectronics 
+												evaluation board used to run the example, uncomment the corresponding line in 
+												platform_config.h file.</font></font></p>
+<font face="Arial, Helvetica, sans-serif" size="2">										<table border="0" cellpadding="0" cellspacing="5" width="100%">
+											<tbody>
+												<tr valign="top">
+													<td height="42">
+														<table border="0" cellpadding="0" cellspacing="0" width="100%">
+															<tbody>
+																<tr valign="top">
+																	<td height="19" width="134">&nbsp;</td>
+																	<td height="19">&nbsp;</td>
+																</tr>
+																<tr>
+																	<td colspan="1" rowspan="1" height="26" width="134"><font face="Arial, Helvetica, sans-serif" size="2"><img style="width: 14px; height: 12px;" alt="" src="_htmresc/ar_s.gif">&nbsp;<strong><font face="Arial, Helvetica, sans-serif" size="2"><font face="Arial, Helvetica, sans-serif" size="2"><font face="Arial, Helvetica, sans-serif" size="2"><a target="_blank" href="Project%5CAudio_Speaker">Audio_Speaker</a></font></font></font></strong></font></td>
+																	<td height="26" width="79%"><font size="2">The USB Audio Speaker demo gives examples of 
+																			how to use the STM32&nbsp;</font><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">USB-FS-Device</font></span><font size="2"> peripheral to communicate with the PC host in 
+																			the isochronous transfer mode. It provides a demonstration of the correct 
+																			method for configuring an isochronous endpoint, receiving or transmitting data 
+																			from/to the host.</font></td>
+																</tr>
+																<tr>
+																	<td height="22" width="134"></td>
+																	<td height="22" width="79%"></td>
+																</tr>
+																<tr valign="top">
+																	<td height="26" width="134"><font face="Arial, Helvetica, sans-serif" size="2"><img style="width: 14px; height: 12px;" alt="" src="_htmresc/ar_s.gif">&nbsp;<strong><font face="Arial, Helvetica, sans-serif" size="2"><a target="_blank" href="Project%5CCustom_HID">Custom_HID</a></font></strong></font></td>
+																	<td height="26" width="79%"><font face="Arial, Helvetica, sans-serif" size="2"> This 
+																			Demo provides a description of how to use the </font><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">USB-FS-Device</font></span><font face="Arial, Helvetica, sans-serif" size="2">on the STM32 devices. The 
+																			STM32 device is enumerated as HID compliant device, that uses the native PC 
+																			Host USB HID driver.</font></td>
+																</tr>
+																<tr valign="top">
+																	<td height="22" width="134">&nbsp;</td>
+																	<td height="22"><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;</font></td>
+																</tr>
+																<tr valign="top">
+																	<td height="26" width="134"><font face="Arial, Helvetica, sans-serif" size="2"><img style="width: 14px; height: 12px;" alt="" src="_htmresc/ar_s.gif">&nbsp;<strong><font face="Arial, Helvetica, sans-serif" size="2"><font face="Arial, Helvetica, sans-serif" size="2"><a target="_blank" href="Project%5CDevice_Firmware_Upgrade">Device_Firmware_Upgrade</a>&nbsp;&nbsp;
+																					</font></font></strong></font>
+																	</td>
+																	<td height="26" width="79%"><font face="Arial, Helvetica, sans-serif" size="2">This 
+																			Demo presents the implementation of a device firmware upgrade (DFU) capability 
+																			in the STM32 microcontrollers. It follows the DFU class specification 
+																			defined by the&nbsp;</font><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">USB-FS-Device</font></span><font face="Arial, Helvetica, sans-serif" size="2"> Implementers Forum for reprogramming an application through&nbsp;</font><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">USB-FS-Device</font></span><font face="Arial, Helvetica, sans-serif" size="2">. The DFU principle is particularly well suited to&nbsp;</font><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">USB-FS-Device</font></span><font face="Arial, Helvetica, sans-serif" size="2"> applications that 
+																			need to be reprogrammed in the field.</font></td>
+																</tr>
+																<tr valign="top">
+																	<td height="22" width="134">&nbsp;</td>
+																	<td height="22"><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;</font></td>
+																</tr>
+																<tr valign="top">
+																	<td height="26" width="134"><font face="Arial, Helvetica, sans-serif" size="2"><img style="width: 14px; height: 12px;" alt="" src="_htmresc/ar_s.gif">&nbsp;<strong><font face="Arial, Helvetica, sans-serif" size="2"><font face="Arial, Helvetica, sans-serif" size="2"><a target="_blank" href="Project%5CJoyStickMouse">JoyStickMouse</a></font></font></strong></font></td>
+																	<td height="26" width="79%"><font face="Arial, Helvetica, sans-serif" size="2"> This 
+																			Demo provides a description of how to use the&nbsp;</font><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">USB-FS-Device</font></span><font face="Arial, Helvetica, sans-serif" size="2"> on the STM32 devices. The 
+																			STM32 device is enumerated as an&nbsp;</font><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">USB-FS-Device</font></span><font face="Arial, Helvetica, sans-serif" size="2"> Joystick Mouse, that uses the native 
+																			PC Host&nbsp;</font><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">USB-FS-Device</font></span><font face="Arial, Helvetica, sans-serif" size="2"> HID driver. The Joystick mounted on the STM3210B-EVAL and 
+																			STM3210E-EVAL boards is used to emulate the Mouse directions.</font></td>
+																</tr>
+												
+												<tr valign="top">
+													<td colspan="1" rowspan="1" height="22" width="134">&nbsp;</td>
+													<td height="22"><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;</font></td>
+												</tr>
+												<tr valign="top">
+													<td height="26" width="134"><font face="Arial, Helvetica, sans-serif" size="2"><img style="width: 14px; height: 12px;" alt="" src="_htmresc/ar_s.gif">&nbsp;<strong><font face="Arial, Helvetica, sans-serif" size="2"><font face="Arial, Helvetica, sans-serif" size="2"><a target="_blank" href="Project%5CMass_Storage">Mass_Storage</a></font></font></strong></font></td>
+													<td height="26" width="79%"><font face="Arial, Helvetica, sans-serif" size="2"><font face="Arial, Helvetica, sans-serif" size="2">This 
+																Demo</font> &nbsp;gives a typical example of how to use the STM32&nbsp;</font><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">USB-FS-Device</font></span><font face="Arial, Helvetica, sans-serif" size="2"> 
+															peripheral to communicate with the PC host using the bulk transfer. This demo 
+															supports the BOT (bulk only transfer) protocol and all needed SCSI (small 
+															computer system interface) commands, and is compatible with both Windows XP 
+															(SP1/SP2) and Windows 2000 (SP4).</font></td>
+												</tr>
+							
+							<tr valign="top">
+								<td height="22" width="134">&nbsp;</td>
+								<td height="22"><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;</font></td>
+							</tr>
+							<tr valign="top">
+								<td height="26" width="134"><font face="Arial, Helvetica, sans-serif" size="2"><img style="width: 14px; height: 12px;" alt="" src="_htmresc/ar_s.gif">&nbsp;<strong><font face="Arial, Helvetica, sans-serif" size="2"><font face="Arial, Helvetica, sans-serif" size="2"><a target="_blank" href="Project%5CVirtual_COM_Port">Virtual_COM_Port</a></font></font></strong></font></td>
+								<td height="26" width="79%"><font face="Arial, Helvetica, sans-serif" size="2">In 
+										modern PCs,&nbsp;</font><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">USB-FS-Device</font></span><font face="Arial, Helvetica, sans-serif" size="2"> is the standard communication port for almost all peripherals. 
+										However many industrial software applications still use the classic COM Port 
+										(UART). The Virtual COM Port Demo provides a simple solution to bypass this 
+										problem; it uses the&nbsp;</font><span style="font-size: 10pt; font-family: Arial;"><font face="Arial, Helvetica, sans-serif" size="2">USB-FS-Device</font></span><font face="Arial, Helvetica, sans-serif" size="2"> as a COM port by affecting the legacy PC application 
+										designed for COM Port communication. This Virtual COM Port Demo provides the 
+										firmware examples for the STM32 family. </font>
+								</td>
+							</tr>
+				
+			
+		</tbody></table>
+		<br>
+		<table border="0" cellpadding="2" cellspacing="0" width="100%">
+			<tbody><tr>
+				<td class="tabtitle"><strong><font face="Arial, Helvetica, sans-serif" size="4">Firmware, 
+							software and documents</font></strong></td>
+			</tr>
+		</tbody></table>
+		<table border="0" cellpadding="0" cellspacing="5" width="100%">
+			<tbody><tr>
+				<td width="3%"><font face="Arial, Helvetica, sans-serif" size="2"><img style="width: 14px; height: 12px;" alt="" src="_htmresc/ar_s.gif"></font></td>
+				<td width="97%"><font face="Arial, Helvetica, sans-serif" size="2">For complete 
+						documentation refer to <a href="http://www.st.com/stm32" target="_blank">www.st.com/STM32</a><strong>
+						</strong></font>
+				</td>
+			</tr>
+		</tbody></table>
+		</td></tr>
+		<tr valign="top">
+			<td>&nbsp;</td>
+		</tr>
+		</tbody></table></font></td></tr></tbody></table></td></tr></tbody></table>
+	</body></html>

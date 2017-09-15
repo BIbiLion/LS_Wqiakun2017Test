@@ -1,0 +1,30 @@
+STM32_USB_Demo例子:USB虚拟串口、HID、游戏手柄、USB音频传输等demo源码。
+STM32_USB_HID_PC_demo:USB HID Demonstrator Release软件和文档
+STM32_USB_HID_分析:STM32 USB HID 固件学习分析
+STM32_USB_HID_例子：STM32 USB HID方式收发例子。
+STM32_USB_HID_学习心得:基于STM32 的USB程序开发笔记、修改STM32的USB例程为自己所用、初涉USB，初学者USB入门总结——枚举。
+STM32_固件库说明文档:STM32_USB_Demo例子的中文说明文档。
+STM32F107 鼠标USB改 HID数据发送程序。
+USB_HID_8051F例子。
+USB_HID_C51源码。
+USB_HID_PC_源码:PC端打开HID设备、读写操作实例。
+USB_HID_PC接收发送工具:用于调试USB HID设备，就相当于串口工具啦。自己写好了HID设备，用它接收发送调试非常方便。
+USB_HID_PC通信详解:PC端HID读写操作说明。
+USB_HID_VC++6.0_入门级例子：简单读写USB HID设备，很好的参考作用。
+USB_HID_VC++6.0_入门级例子开发步骤（图解说明，真详细啊！）：一步一步手把把手教你开发VC++6.0 USB HID程序。
+USB_HID_VC++6.0读写设备源码：简单打开HID设备，读写源码，参考的好例子。
+USB_HID_VC++6.0源码：出具雏形的VC++6.0 USB HID 工具源码。非常完善了，可以直接当工具使用，关键是有源码！
+USB_HID_开发过程详细说明：长篇论文一篇，详细说明HID开发过程，包括下位机、上位机、HID驱动的开发，牛！
+USB_HID协议（英文）。
+USB_STM32_HID开发笔记:里面有USB设备枚举的详细过程，抓包说明的哦。当然包括开发过程啦。令牌包、握手包、数据包中的数据都看得到。
+USB_URB分析：抓包工具抓到的数据包的详细解析。
+USB_VC教程:短论文一篇，用VC++编写USB接口通信程序，简洁扼要说明VC++6.0开发步骤，提纲挈领，值得一看！
+USB2.0协议(英文)。
+USB技术规范（中文）：中文的USB技术规范说明，中文的！
+USB抓包软件:两种抓包工具，bushound和usbtrace。都是破解版，哈哈，自己偷着乐吧！
+深入解析STM32_USB库：STM32 USB的库说明。
+
+
+
+
+
